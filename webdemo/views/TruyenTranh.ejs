@@ -1,0 +1,20 @@
+<% var n="<font color=green>1999</font>"; 
+    var tuoi = 20; %>
+
+<html>
+<head>
+</head>
+<body>
+    <h1 style="color:red; font-weight:bold" >WELLCOME TO TRUYENTRANH.EJS, from Mixi With Love </h1>
+    <h2><%- n %></h2>
+   
+    <% if(tuoi>=18){ %>
+        <h2>Bạn đủ tuổi truy cập</h2>
+    <% }else{ %>
+        <h2>Bạn chưa đủ tuổi truy cập</h2>
+        <% } %>
+    <% for(var i=1;i<=10;i++){ %>
+        <h3>From Mixi With Love - <%=i%></h3>
+   <% } %>
+</body>
+</html>

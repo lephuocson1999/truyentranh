@@ -1,0 +1,965 @@
+<%- include('../partials/header.ejs') -%>
+<div class="site-content">
+    <div
+        class="post-295 wp-manga type-wp-manga status-publish has-post-thumbnail hentry wp-manga-tag-manga wp-manga-release-101 wp-manga-author-damane-yuko wp-manga-artist-damane-yuko wp-manga-genre-mecha wp-manga-genre-mystery wp-manga-genre-one-shot wp-manga-genre-psychological wp-manga-genre-romance wp-manga-genre-school-life"
+    >
+        <div class="profile-manga" style="background-image: url(/assets/wp-content/themes/madara/images/bg-search.jpg);">
+            <div class="container">
+                <div class="row">
+                    <% if(infoStory ) {%>
+                        <div class="col-12 col-sm-12 col-md-12">
+                            <div class="c-breadcrumb-wrapper">
+                                <div class="c-breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li>
+                                            <a href="/home"> Home </a>
+                                        </li>
+                                        <li>
+                                            <a href="/danh-muc"> All Mangas </a>
+                                        </li>
+    
+                                        <li>
+                                            <%infoStory.category.forEach(item2 => {%>
+                                                <a href="/danh-muc?id=<%=item2._id%>"> <%=item2.title%> </a>
+                                            <%})%>
+                                        </li>
+    
+                                        <li>
+                                            <a href> <%=infoStory.storyname%> </a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+    
+                            <div class="post-title">
+                                <h1>
+                                    <span class="manga-title-badges new">NEW</span>
+                                    <%=infoStory.storyname%> 
+                                </h1>
+                            </div>
+                            <div class="tab-summary">
+                                <div class="summary_image">
+                                    <a href>
+                                        <img
+                                            width="200"
+                                            height="300"
+                                            data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-543371-193x278.jpg"
+                                            data-srcset="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-543371-193x278.jpg 193w, http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-543371-125x180.jpg 125w"
+                                            data-sizes="(max-width: 193px) 100vw, 193px"
+                                            class="img-responsive lazyload effect-fade"
+                                            src="/assets/wp-content/themes/madara/images/dflazy.jpg"
+                                            style="padding-top: 278px;"
+                                            alt="wallhaven-543371"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="summary_content_wrap">
+                                    <div class="summary_content">
+                                        <div class="post-content">
+                                            <div class="loader-inner ball-pulse">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="post-rating">
+                                                <div class="post-total-rating">
+                                                    <i class="ion-ios-star ratings_stars rating_current"></i><i class="ion-ios-star ratings_stars rating_current"></i><i class="ion-ios-star ratings_stars rating_current"></i>
+                                                    <i class="ion-ios-star ratings_stars rating_current"></i><i class="ion-ios-star-outline ratings_stars"></i><span class="score font-meta total_votes">4.2</span>
+                                                </div>
+                                                <div class="user-rating">
+                                                    <i class="ion-ios-star-outline ratings_stars"></i><i class="ion-ios-star-outline ratings_stars"></i><i class="ion-ios-star-outline ratings_stars"></i>
+                                                    <i class="ion-ios-star-outline ratings_stars"></i><i class="ion-ios-star-outline ratings_stars"></i><span class="score font-meta total_votes">Your Rating</span>
+                                                </div>
+                                                <input type="hidden" class="rating-post-id" value="295" />
+                                            </div>
+    
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Rating
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content vote-details" vocab="https://schema.org/" typeof="AggregateRating">
+                                                    <span property="itemReviewed" typeof="Book"><span class="rate-title" property="name" title="Hajimaru Himitsu no Jikan"><%=infoStory.storyname%> </span></span>
+                                                    <span>
+                                                        <span> Average <span property="ratingValue" id="averagerate"> 4.2</span> / <span property="bestRating">5</span> </span>
+                                                    </span>
+                                                    out of <span property="ratingCount" id="countrate">10</span>
+                                                </div>
+                                            </div>
+                                            <div class="post-content_item">                                                                              
+                                                <div class="summary-heading">                                                
+                                                    <h5>
+                                                        Rank
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">                                               
+                                                    14th, it has 115 monthly views
+                                                </div>
+                                            </div>
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Alternative
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    Himitsu Hajimaru no Jikan
+                                                </div>
+                                            </div>
+    
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Author
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    <div class="author-content">
+                                                        <a href="../../manga-author/damane-yuko/" rel="tag"><%=infoStory.author%></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Artist(s)
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    <div class="artist-content">
+                                                        <a href="../../manga-artist/damane-yuko/" rel="tag">DAMANE Yuko</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Genre(s)
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    <div class="genres-content">
+                                                        <a href="../../manga-genre/mecha/" rel="tag">Mecha</a>, <a href="../../manga-genre/mystery/" rel="tag">Mystery</a>, <a href="../../manga-genre/one-shot/" rel="tag">One shot</a>,
+                                                        <a href="../../manga-genre/psychological/" rel="tag">Psychological</a>, <a href="../../manga-genre/romance/" rel="tag">Romance</a>,
+                                                        <a href="../../manga-genre/school-life/" rel="tag">School Life</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Type
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    Romance
+                                                </div>
+                                            </div>
+    
+                                            <div id="init-links" class="nav-links">
+                                                <% for (let i = 0 ; i < infoStory.chapter.length; i++){%>
+                                                    <a href="/danh-muc/truyen-tranh/chapter?id=<%= infoStory.chapter[i]._id %>" id="btn-read-first" class="c-btn c-btn_style-1"> Read First</a>
+                                                    <% break; %>
+                                                <%}%>
+                                                <% for (let i = infoStory.chapter.length-1 ; i >= 0 ; i--){%>
+                                                    <a href="/danh-muc/truyen-tranh/chapter?id=<%= infoStory.chapter[i]._id %>" id="btn-read-last" class="c-btn c-btn_style-1">Read Last</a>
+                                                    <% break; %>
+                                                <%}%>
+                                            </div>
+                                        </div>
+                                        <div class="post-status">
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Release
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    <a href="../../manga-release/2012/" rel="tag">2012</a>
+                                                </div>
+                                            </div>
+                                            <div class="post-content_item">
+                                                <div class="summary-heading">
+                                                    <h5>
+                                                        Status
+                                                    </h5>
+                                                </div>
+                                                <div class="summary-content">
+                                                    OnGoing
+                                                </div>
+                                            </div>
+                                            <div class="manga-action">
+                                                <div class="count-comment">
+                                                    <div class="action_icon">
+                                                        <a href="#manga-discussion"><i class="icon ion-md-chatbubbles"></i></a>
+                                                    </div>
+                                                    <div class="action_detail">
+                                                        <span>3 comments</span>
+                                                    </div>
+                                                </div>
+                                                <div class="add-bookmark">
+                                                    <div class="action_icon">
+                                                        <script type="text/javascript">
+                                                            var requireLogin2BookMark = true;
+                                                        </script>
+                                                        <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="295" data-chapter data-page="1" title="Bookmark"><i class="icon ion-ios-bookmark"></i></a>
+                                                    </div>
+                                                    <div class="action_detail"><span>Bookmark This</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <%} %>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-page-content style-1">
+            <div class="content-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-col col-md-8 col-sm-8">
+                            <!-- container & no-sidebar-->
+                            <div class="main-col-inner">
+                                <div class="c-page">
+                                    <!-- <div class="c-page__inner"> -->
+                                    <% if(infoStory ) {%>
+                                        <div class="c-page__content">
+                                            <div class="c-blog__heading style-2 font-heading">
+                                                <h2 class="h4">
+                                                    <i class="icon ion-ios-star"></i>
+                                                    Summary
+                                                </h2>
+                                            </div>
+    
+                                            <div class="description-summary">
+                                                <div class="summary__content show-more">
+                                                    <p>
+                                                        <%=infoStory.summary%>
+                                                    </p>
+                                                </div>
+    
+                                                <div class="c-content-readmore">
+                                                    <span class="btn btn-link content-readmore"> Show more </span>
+                                                </div>
+                                            </div>
+    
+                                            <div id="manga-chapters-holder" data-id="295"><i class="fas fa-spinner fa-spin fa-3x"></i></div>
+                                        </div>
+                                        <%}%>
+
+                                    
+                                    <!-- </div> -->
+                                </div>
+
+                                <!-- comments-area -->
+
+                                <div id="manga-discussion" class="c-blog__heading style-2 font-heading">
+                                    <i class="ion-ios-star"></i>
+                                    <h4>MANGA DISCUSSION</h4>
+                                </div>
+                                <div class="manga-discussion wrapper">
+                                    <div class="hr mv40"></div>
+
+                                    <div id="comments" class="comments-area">
+                                        <div id="respond" class="comment-respond">
+                                            <h4 id="reply-title" class="comment-reply-title">
+                                                Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">Cancel reply</a></small>
+                                            </h4>
+                                            <form action="http://demo.mangabooth.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                                                <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
+                                                <p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comment"></textarea></p>
+                                                <p class="comment-form-author">
+                                                    <label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" placeholder="Name" value size="30" aria-required="true" />
+                                                </p>
+                                                <p class="comment-form-email">
+                                                    <label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" placeholder="Email" value size="30" aria-required="true" />
+                                                </p>
+                                                <p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" placeholder="Website" value size="30" /></p>
+                                                <p class="comment-form-cookies-consent">
+                                                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+                                                    <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+                                                </p>
+                                                <p class="form-submit">
+                                                    <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type="hidden" name="comment_post_ID" value="295" id="comment_post_ID" />
+                                                    <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+                                                </p>
+                                                <input type="hidden" name="wp_manga_chapter_id" value="0" />
+                                            </form>
+                                        </div>
+                                        <!-- #respond -->
+
+                                        <h4 class="comments-title">
+                                            3 Comments
+                                        </h4>
+
+                                        <ol class="comment-list">
+                                            <li class="comment even thread-even depth-1" id="comment-470">
+                                                <article id="div-comment-470" class="comment-body">
+                                                    <div class="block block-left">
+                                                        <footer class="comment-meta">
+                                                            <div class="comment-avatar">
+                                                                <img
+                                                                    alt
+                                                                    src="http://2.gravatar.com/avatar/ea089d34fcb1fa395fed7a3fa90eafe5?s=60&d=mm&r=g"
+                                                                    srcset="http://2.gravatar.com/avatar/ea089d34fcb1fa395fed7a3fa90eafe5?s=120&d=mm&r=g 2x"
+                                                                    class="avatar avatar-60 photo"
+                                                                    height="60"
+                                                                    width="60"
+                                                                />
+                                                            </div>
+                                                        </footer>
+                                                        <!-- .comment-meta -->
+                                                    </div>
+                                                    <div class="block block-right">
+                                                        <div class="comment-author">
+                                                            <h6 class="heading fn"><a href="http://commenter.url" rel="external nofollow ugc" class="url">Commenter 469</a></h6>
+                                                        </div>
+                                                        <!--!comment-author-->
+                                                        <div class="comment-content">
+                                                            <p>
+                                                                tellus eget lacus molestie laoreet. Phasellus commodo euismod mauris. Sed facilisis nulla a est. Proin sit amet lectus. Morbi suscipit libero a nisl. Sed quam ipsum,
+                                                                ullamcorper non, congue vitae, ornare non, nisl. Nunc ultrices. Aliquam imperdiet velit sit amet nulla. Sed a neque. Fusce tempus tortor ut diam. Quisque sagittis lacus eget
+                                                                velit. Quisque augue magna, commodo in, molestie nec, convallis at, tortor. Etiam blandit ultrices tortor. Aliquam nisi risus, lobortis vitae, elementum pulvinar, viverra vel,
+                                                                dolor. Donec metus urna, faucibus aliquet, egestas in, adipiscing sit amet, risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin
+                                                                nisi. Nunc hendrerit nisi lobortis purus.
+                                                            </p>
+                                                            <p>
+                                                                Vivamus turpis ante, ultrices scelerisque, elementum id, tempor at, quam. Cras eu mauris eu nulla congue convallis. Fusce ornare, nibh sit amet porta rhoncus, nibh metus
+                                                                tincidunt magna, quis gravida dui nequ
+                                                            </p>
+                                                        </div>
+                                                        <!-- .comment-content -->
+                                                        <div class="comment-metadata">
+                                                            <a href="#comment-470"> October 13, 2017 at 3:33 am</a>
+                                                        </div>
+                                                        <!-- .comment-metadata -->
+                                                    </div>
+
+                                                    <div class="reply">
+                                                        <a
+                                                            rel="nofollow"
+                                                            class="comment-reply-link"
+                                                            href="#respond"
+                                                            data-commentid="470"
+                                                            data-postid="295"
+                                                            data-belowelement="div-comment-470"
+                                                            data-respondelement="respond"
+                                                            aria-label="Reply to Commenter 469"
+                                                        >
+                                                            Reply
+                                                        </a>
+                                                    </div>
+                                                </article>
+                                            </li>
+                                            <!-- #comment-## -->
+                                            <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-471">
+                                                <article id="div-comment-471" class="comment-body">
+                                                    <div class="block block-left">
+                                                        <footer class="comment-meta">
+                                                            <div class="comment-avatar">
+                                                                <img
+                                                                    alt
+                                                                    src="http://2.gravatar.com/avatar/ea089d34fcb1fa395fed7a3fa90eafe5?s=60&d=mm&r=g"
+                                                                    srcset="http://2.gravatar.com/avatar/ea089d34fcb1fa395fed7a3fa90eafe5?s=120&d=mm&r=g 2x"
+                                                                    class="avatar avatar-60 photo"
+                                                                    height="60"
+                                                                    width="60"
+                                                                />
+                                                            </div>
+                                                        </footer>
+                                                        <!-- .comment-meta -->
+                                                    </div>
+                                                    <div class="block block-right">
+                                                        <div class="comment-author">
+                                                            <h6 class="heading fn"><a href="http://commenter.url" rel="external nofollow ugc" class="url">Commenter 470</a></h6>
+                                                        </div>
+                                                        <!--!comment-author-->
+                                                        <div class="comment-content">
+                                                            <p>ciis natoque penatibus et magnis dis parturient montes, nascetur</p>
+                                                        </div>
+                                                        <!-- .comment-content -->
+                                                        <div class="comment-metadata">
+                                                            <a href="#comment-471"> October 13, 2017 at 3:33 am</a>
+                                                        </div>
+                                                        <!-- .comment-metadata -->
+                                                    </div>
+
+                                                    <div class="reply">
+                                                        <a
+                                                            rel="nofollow"
+                                                            class="comment-reply-link"
+                                                            href="#respond"
+                                                            data-commentid="471"
+                                                            data-postid="295"
+                                                            data-belowelement="div-comment-471"
+                                                            data-respondelement="respond"
+                                                            aria-label="Reply to Commenter 470"
+                                                        >
+                                                            Reply
+                                                        </a>
+                                                    </div>
+                                                </article>
+                                            </li>
+                                            <!-- #comment-## -->
+                                            <li class="comment even thread-even depth-1" id="comment-472">
+                                                <article id="div-comment-472" class="comment-body">
+                                                    <div class="block block-left">
+                                                        <footer class="comment-meta">
+                                                            <div class="comment-avatar">
+                                                                <img
+                                                                    alt
+                                                                    src="http://2.gravatar.com/avatar/ea089d34fcb1fa395fed7a3fa90eafe5?s=60&d=mm&r=g"
+                                                                    srcset="http://2.gravatar.com/avatar/ea089d34fcb1fa395fed7a3fa90eafe5?s=120&d=mm&r=g 2x"
+                                                                    class="avatar avatar-60 photo"
+                                                                    height="60"
+                                                                    width="60"
+                                                                />
+                                                            </div>
+                                                        </footer>
+                                                        <!-- .comment-meta -->
+                                                    </div>
+                                                    <div class="block block-right">
+                                                        <div class="comment-author">
+                                                            <h6 class="heading fn"><a href="http://commenter.url" rel="external nofollow ugc" class="url">Commenter 471</a></h6>
+                                                        </div>
+                                                        <!--!comment-author-->
+                                                        <div class="comment-content">
+                                                            <p>
+                                                                end faucibus magna. Fusce malesuada ante eget massa. Donec consectetur dolor vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit risus,
+                                                                pellentesque sed, imperdiet quis, pulvinar in, odio.
+                                                            </p>
+                                                            <p>
+                                                                Duis nulla diam, fringilla at, feugiat et, tincidunt consectetur, magna. Duis id est ac neque mollis ullamcorper. Nulla quis urna. Ut vitae nisi sit amet lectus blandit
+                                                                ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus consectetur nunc at sapien. Ut pellent
+                                                            </p>
+                                                        </div>
+                                                        <!-- .comment-content -->
+                                                        <div class="comment-metadata">
+                                                            <a href="#comment-472"> October 13, 2017 at 3:33 am</a>
+                                                        </div>
+                                                        <!-- .comment-metadata -->
+                                                    </div>
+
+                                                    <div class="reply">
+                                                        <a
+                                                            rel="nofollow"
+                                                            class="comment-reply-link"
+                                                            href="#respond"
+                                                            data-commentid="472"
+                                                            data-postid="295"
+                                                            data-belowelement="div-comment-472"
+                                                            data-respondelement="respond"
+                                                            aria-label="Reply to Commenter 471"
+                                                        >
+                                                            Reply
+                                                        </a>
+                                                    </div>
+                                                </article>
+                                            </li>
+                                            <!-- #comment-## -->
+                                        </ol>
+                                        <!-- .comment-list -->
+                                    </div>
+                                    <!-- #comments -->
+                                </div>
+
+                                <!-- END comments-area -->
+
+                                <div class="wp-manga-tags-wrapper">
+                                    <div class="wp-manga-tags">
+                                        <h5>Tags:</h5>
+                                        <div class="wp-manga-tags-list">
+                                            <a href="../../manga-tag/manga/" class>Manga</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-col col-md-4 col-sm-4">
+                            <div id="main-sidebar" class="main-sidebar" role="complementary">
+                                <div class="row">
+                                    <div id="manga-genres-id-5" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 manga-genres-class-name">
+                                        <div class="widget__inner manga-genres-class-name__inner c-widget-wrap">
+                                            <div class="genres_wrap">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="widget-heading font-nav"><h5 class="heading">GENRES</h5></div>
+                                                        <div class="widget-content">
+                                                            <div class="genres__collapse" style="display: block;">
+                                                                <div class="row genres">
+                                                                    <ul class="list-unstyled">
+                                                                        <% if(listCategory && listCategory.length) {%>
+                                                                            <%listCategory.forEach(item => {%>
+                                                                        <li class="col-xs-6 col-sm-6">
+                                                                            <a href="manga-genre/action/"> <%= item.title %></a>
+                                                                        </li>
+                                                                        <%})%>
+                                                                        <%} %>
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="wp_manga_release_id-3" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 wp_manga_wg_year_release c-released">
+                                        <div class="widget__inner wp_manga_wg_year_release c-released__inner c-widget-wrap">
+                                            <div class="widget-heading font-nav"><h5 class="heading">YEAR OF RELEASED</h5></div>
+                                            <div class="widget-content">
+                                                <div class="c-released_content">
+                                                    <div class="released-item-wrap">
+                                                        <ul class="list-released">
+                                                            <li>
+                                                                <a href="../../manga-release/2015/">2015</a>
+                                                                <a href="../../manga-release/2013/">2013</a>
+                                                                <a href="../../manga-release/2012/">2012</a>
+                                                                <a href="../../manga-release/2011/">2011</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="../../manga-release/2010/">2010</a>
+                                                                <a href="../../manga-release/2009/">2009</a>
+                                                                <a href="../../manga-release/2008/">2008</a>
+                                                                <a href="../../manga-release/2007/">2007</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="../../manga-release/2003/">2003</a>
+                                                                <a href="../../manga-release/2002/">2002</a>
+                                                                <a href="../../manga-release/2000/">2000</a>
+                                                                <a href="../../manga-release/1994/">1994</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="../../manga-release/1992/">1992</a>
+                                                                <a href="../../manga-release/1990/">1990</a>
+                                                                <a href="../../manga-release/1985/">1985</a>
+                                                                <a href="../../manga-release/1982/">1982</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="../../manga-release/1980/">1980</a>
+                                                                <a href="../../manga-release/1975/">1975</a>
+                                                                <a href="../../manga-release/1960/">1960</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="released-search">
+                                                        <form action="http://demo.mangabooth.com" method="get">
+                                                            <input type="text" placeholder="Other..." name="wp-manga-release" value />
+                                                            <input type="submit" value="Go" />
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="cool_tag_cloud-2" class="widget col-xs-12 col-md-12 default no-icon heading-style-1 widget_cool_tag_cloud">
+                                        <div class="widget__inner widget_cool_tag_cloud__inner c-widget-wrap">
+                                            <div class="widget-heading font-nav"><h5 class="heading">Manga Tags</h5></div>
+                                            <div class="widget-content">
+                                                <div class="cool-tag-cloud">
+                                                    <div class="ctcdefault">
+                                                        <div class="ctcleft">
+                                                            <div class="arial" style="text-transform: none !important;">
+                                                                <% if(infoStory && infoStory.tag.length) { %>
+                                                                    <% infoStory.tag.forEach(item => { %>
+                                                                        <a href="../../manga-tag/achitaka/" class="tag-cloud-link tag-link-117 tag-link-position-1" style="font-size: 10px;"><%= item.title %></a>
+                                                                    <% }) %>
+                                                                <% } %>
+                                                                <!-- <a href="../../manga-tag/action/" class="tag-cloud-link tag-link-88 tag-link-position-2" style="font-size: 10px;">Action</a>
+                                                                <a href="../../manga-tag/cartoon/" class="tag-cloud-link tag-link-199 tag-link-position-3" style="font-size: 10px;">Cartoon</a>
+                                                                <a href="../../manga-tag/gitachi/" class="tag-cloud-link tag-link-160 tag-link-position-4" style="font-size: 10px;">Gitachi</a>
+                                                                <a href="../../manga-tag/hajime/" class="tag-cloud-link tag-link-118 tag-link-position-5" style="font-size: 10px;">Hajime</a>
+                                                                <a href="../../manga-tag/inmoki/" class="tag-cloud-link tag-link-135 tag-link-position-6" style="font-size: 10px;">Inmoki</a>
+                                                                <a href="../../manga-tag/jiokima/" class="tag-cloud-link tag-link-145 tag-link-position-7" style="font-size: 10px;">Jiokima</a>
+                                                                <a href="../../manga-tag/kionasa/" class="tag-cloud-link tag-link-130 tag-link-position-8" style="font-size: 10px;">Kionasa</a>
+                                                                <a href="../../manga-tag/kitasou-girl/" class="tag-cloud-link tag-link-159 tag-link-position-9" style="font-size: 10px;">Kitasou Girl</a>
+                                                                <a href="../../manga-tag/kyoto/" class="tag-cloud-link tag-link-111 tag-link-position-10" style="font-size: 10px;">Kyoto</a>
+                                                                <a href="../../manga-tag/nakaji/" class="tag-cloud-link tag-link-136 tag-link-position-11" style="font-size: 10px;">Nakaji</a>
+                                                                <a href="../../manga-tag/nasama-okima/" class="tag-cloud-link tag-link-112 tag-link-position-12" style="font-size: 10px;">Nasama Okima</a>
+                                                                <a href="../../manga-tag/nobiomi/" class="tag-cloud-link tag-link-161 tag-link-position-13" style="font-size: 10px;">Nobiomi</a>
+                                                                <a href="../../manga-tag/okama-sanmikioa/" class="tag-cloud-link tag-link-128 tag-link-position-14" style="font-size: 10px;">Okama Sanmikioa</a>
+                                                                <a href="../../manga-tag/okima/" class="tag-cloud-link tag-link-123 tag-link-position-15" style="font-size: 10px;">Okima</a>
+                                                                <a href="../../manga-tag/orkatawai/" class="tag-cloud-link tag-link-153 tag-link-position-16" style="font-size: 10px;">Orkatawai</a>
+                                                                <a href="../../manga-tag/otakini/" class="tag-cloud-link tag-link-137 tag-link-position-17" style="font-size: 10px;">Otakini</a>
+                                                                <a href="../../manga-tag/shahana/" class="tag-cloud-link tag-link-146 tag-link-position-18" style="font-size: 10px;">Shahana</a>
+                                                                <a href="../../manga-tag/taika-sekaiji/" class="tag-cloud-link tag-link-152 tag-link-position-19" style="font-size: 10px;">Taika Sekaiji</a>
+                                                                <a href="../../manga-tag/tasasimi/" class="tag-cloud-link tag-link-124 tag-link-position-20" style="font-size: 10px;">Tasasimi</a> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="manga-history-id-4" class="widget col-xs-12 col-md-12 background no-icon heading-style-1 manga-history-widget">
+                                        <div class="widget__inner manga-history-widget__inner c-widget-wrap">
+                                            <div class="widget-heading font-nav"><h5 class="heading">MY READING HISTORY</h5></div>
+                                            <div class="widget-content">
+                                                <div class="my-history">
+                                                    <!-- -->
+                                                    <span class="no-histories" style="display: none;">You don&#039;t have anything in histories</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    jQuery(document).on("ready", function () {
+                                        jQuery.ajax({
+                                            url: manga.ajax_url,
+                                            type: "GET",
+                                            data: {
+                                                action: "guest_histories",
+                                                count: 3,
+                                            },
+                                            success: function (html) {
+                                                if (html && html != "0") {
+                                                    jQuery("#manga-history-id-4 .my-history").html(html);
+                                                } else {
+                                                    jQuery("#manga-history-id-4 .no-histories").show();
+                                                }
+                                            },
+                                            complete: function (e) {},
+                                        });
+                                    });
+                                </script>
+                                <div class="row">
+                                    <div id="manga-recent-4" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 c-popular manga-widget widget-manga-recent">
+                                        <div class="widget__inner c-popular manga-widget widget-manga-recent__inner c-widget-wrap">
+                                            <div class="c-widget-content style-1 with-button">
+                                                <div class="widget-heading font-nav"><h5 class="heading">POPULAR MANGA</h5></div>
+                                                <div class="widget-content">
+                                                    <div class="popular-item-wrap">
+                                                        <div class="popular-img widget-thumbnail c-image-hover">
+                                                            <a title="Manga Video Chapters" href="../massa-consectetur-mattis/">
+                                                                <img
+                                                                    width="75"
+                                                                    height="106"
+                                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550618-75x106.jpg"
+                                                                    class="img-responsive lazyload effect-fade"
+                                                                    src="../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                    style="padding-top: 106px;"
+                                                                    alt="wallhaven-550618"
+                                                                />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="popular-content">
+                                                            <h5 class="widget-title">
+                                                                <a title="Manga Video Chapters" href="../massa-consectetur-mattis/">Manga Video Chapters</a>
+                                                            </h5>
+
+                                                            <div class="list-chapter">
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../massa-consectetur-mattis/episode-121/" class="btn-link"> Episode 121 </a>
+                                                                    </span>
+
+                                                                    <span class="post-on font-meta"> May 10, 2018 </span>
+                                                                </div>
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../massa-consectetur-mattis/episode-122/" class="btn-link"> Episode 122 </a>
+                                                                    </span>
+
+                                                                    <span class="post-on font-meta"> May 10, 2018 </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="popular-item-wrap">
+                                                        <div class="popular-img widget-thumbnail c-image-hover">
+                                                            <a title="Manga Text Chapter" href="../manga-text-chapter/">
+                                                                <img
+                                                                    width="75"
+                                                                    height="106"
+                                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550105-75x106.jpg"
+                                                                    class="img-responsive lazyload effect-fade"
+                                                                    src="../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                    style="padding-top: 106px;"
+                                                                    alt="wallhaven-550105"
+                                                                />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="popular-content">
+                                                            <h5 class="widget-title">
+                                                                <a title="Manga Text Chapter" href="../manga-text-chapter/">Manga Text Chapter</a>
+                                                            </h5>
+
+                                                            <div class="list-chapter">
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../manga-text-chapter/chapter-1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="post-on font-meta"> January 12, 2018 </span>
+                                                                </div>
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../manga-text-chapter/chapter-2/" class="btn-link"> Chapter 2 </a>
+                                                                    </span>
+
+                                                                    <span class="post-on font-meta"> January 12, 2018 </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="popular-item-wrap">
+                                                        <div class="popular-img widget-thumbnail c-image-hover">
+                                                            <a title="Kahana no Shou" href="../kahana-no-shou/">
+                                                                <img
+                                                                    width="75"
+                                                                    height="106"
+                                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-561840-75x106.jpg"
+                                                                    class="img-responsive lazyload effect-fade"
+                                                                    src="../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                    style="padding-top: 106px;"
+                                                                    alt="wallhaven-561840"
+                                                                />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="popular-content">
+                                                            <h5 class="widget-title">
+                                                                <a title="Kahana no Shou" href="../kahana-no-shou/">Kahana no Shou</a>
+                                                            </h5>
+
+                                                            <div class="list-chapter">
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../kahana-no-shou/volume-1/chapter-1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../kahana-no-shou/volume-1/chapter-1/"> Volume 1 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../kahana-no-shou/volume-1/chapter-2/" class="btn-link"> Chapter 2 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../kahana-no-shou/volume-1/chapter-2/"> Volume 1 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="popular-item-wrap">
+                                                        <div class="popular-img widget-thumbnail c-image-hover">
+                                                            <a title="Hitman Reborn Katekyo" href="../hitman-reborn-katekyo/">
+                                                                <img
+                                                                    width="75"
+                                                                    height="106"
+                                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-556142-75x106.jpg"
+                                                                    class="img-responsive lazyload effect-fade"
+                                                                    src="../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                    style="padding-top: 106px;"
+                                                                    alt="wallhaven-556142"
+                                                                />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="popular-content">
+                                                            <h5 class="widget-title">
+                                                                <a title="Hitman Reborn Katekyo" href="../hitman-reborn-katekyo/">Hitman Reborn Katekyo</a>
+                                                            </h5>
+
+                                                            <div class="list-chapter">
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../hitman-reborn-katekyo/volume-1/chapter-1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../hitman-reborn-katekyo/volume-1/chapter-1/"> Volume 1 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../hitman-reborn-katekyo/volume-3/chapter-1_1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../hitman-reborn-katekyo/volume-3/chapter-1_1/"> Volume 3 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="popular-item-wrap">
+                                                        <div class="popular-img widget-thumbnail c-image-hover">
+                                                            <a title="Kyojin Shingeki no" href="../kyojin-shingeki-no/">
+                                                                <img
+                                                                    width="75"
+                                                                    height="106"
+                                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-560695-75x106.jpg"
+                                                                    class="img-responsive lazyload effect-fade"
+                                                                    src="../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                    style="padding-top: 106px;"
+                                                                    alt="wallhaven-560695"
+                                                                />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="popular-content">
+                                                            <h5 class="widget-title">
+                                                                <a title="Kyojin Shingeki no" href="../kyojin-shingeki-no/">Kyojin Shingeki no</a>
+                                                            </h5>
+
+                                                            <div class="list-chapter">
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../kyojin-shingeki-no/volume-1/chapter-1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../kyojin-shingeki-no/volume-1/chapter-1/"> Volume 1 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../kyojin-shingeki-no/volume-2/chapter-1_1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../kyojin-shingeki-no/volume-2/chapter-1_1/"> Volume 2 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="popular-item-wrap">
+                                                        <div class="popular-img widget-thumbnail c-image-hover">
+                                                            <a title="Jikimisuji" href="../jikimisuji/">
+                                                                <img
+                                                                    width="75"
+                                                                    height="106"
+                                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-523582-75x106.jpg"
+                                                                    class="img-responsive lazyload effect-fade"
+                                                                    src="/assets/wp-content/themes/madara/images/dflazy.jpg"
+                                                                    style="padding-top: 106px;"
+                                                                    alt="wallhaven-523582"
+                                                                />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="popular-content">
+                                                            <h5 class="widget-title">
+                                                                <a title="Jikimisuji" href="../jikimisuji/">Jikimisuji</a>
+                                                            </h5>
+
+                                                            <div class="list-chapter">
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../jikimisuji/volume-1/chapter-1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../jikimisuji/volume-1/chapter-1/"> Volume 1 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 11, 2017 </span>
+                                                                </div>
+                                                                <div class="chapter-item">
+                                                                    <span class="chapter font-meta">
+                                                                        <a href="../jikimisuji/volume-1/chapter-1_1/" class="btn-link"> Chapter 1 </a>
+                                                                    </span>
+
+                                                                    <span class="vol font-meta">
+                                                                        <a href="../jikimisuji/volume-1/chapter-1_1/"> Volume 1 </a>
+                                                                    </span>
+                                                                    <span class="post-on font-meta"> October 18, 2017 </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="c-wg-button-wrap">
+                                                        <a class="widget-view-more" href="../">Here for more Popular Manga</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="cool_tag_cloud-3" class="widget col-12 col-md-12 default no-icon heading-style-1 widget_cool_tag_cloud">
+                                        <div class="widget__inner widget_cool_tag_cloud__inner c-widget-wrap">
+                                            <div class="widget-heading font-nav"><h5 class="heading">Manga Tags</h5></div>
+                                            <div class="widget-content">
+                                                <div class="cool-tag-cloud">
+                                                    <div class="ctcdefault">
+                                                        <div class="ctcleft">
+                                                            <div class="arial" style="text-transform: none !important;">
+                                                                <% if(infoStory && infoStory.tag.length) { %>
+                                                                    <% infoStory.tag.forEach(item => { %>
+                                                                        <a href="../../manga-tag/achitaka/" class="tag-cloud-link tag-link-117 tag-link-position-1" style="font-size: 10px;"><%= item.title %></a>
+                                                                    <% }) %>
+                                                                <% } %>
+                                                                <!-- <a href="../../manga-tag/achitaka/" class="tag-cloud-link tag-link-117 tag-link-position-1" style="font-size: 10px;">Achitaka</a>
+                                                                <a href="../../manga-tag/action/" class="tag-cloud-link tag-link-88 tag-link-position-2" style="font-size: 10px;">Action</a>
+                                                                <a href="../../manga-tag/cartoon/" class="tag-cloud-link tag-link-199 tag-link-position-3" style="font-size: 10px;">Cartoon</a>
+                                                                <a href="../../manga-tag/gitachi/" class="tag-cloud-link tag-link-160 tag-link-position-4" style="font-size: 10px;">Gitachi</a>
+                                                                <a href="../../manga-tag/hajime/" class="tag-cloud-link tag-link-118 tag-link-position-5" style="font-size: 10px;">Hajime</a>
+                                                                <a href="../../manga-tag/inmoki/" class="tag-cloud-link tag-link-135 tag-link-position-6" style="font-size: 10px;">Inmoki</a>
+                                                                <a href="../../manga-tag/jiokima/" class="tag-cloud-link tag-link-145 tag-link-position-7" style="font-size: 10px;">Jiokima</a>
+                                                                <a href="../../manga-tag/kionasa/" class="tag-cloud-link tag-link-130 tag-link-position-8" style="font-size: 10px;">Kionasa</a>
+                                                                <a href="../../manga-tag/kitasou-girl/" class="tag-cloud-link tag-link-159 tag-link-position-9" style="font-size: 10px;">Kitasou Girl</a>
+                                                                <a href="../../manga-tag/kyoto/" class="tag-cloud-link tag-link-111 tag-link-position-10" style="font-size: 10px;">Kyoto</a>
+                                                                <a href="../../manga-tag/nakaji/" class="tag-cloud-link tag-link-136 tag-link-position-11" style="font-size: 10px;">Nakaji</a>
+                                                                <a href="../../manga-tag/nasama-okima/" class="tag-cloud-link tag-link-112 tag-link-position-12" style="font-size: 10px;">Nasama Okima</a>
+                                                                <a href="../../manga-tag/nobiomi/" class="tag-cloud-link tag-link-161 tag-link-position-13" style="font-size: 10px;">Nobiomi</a>
+                                                                <a href="../../manga-tag/okama-sanmikioa/" class="tag-cloud-link tag-link-128 tag-link-position-14" style="font-size: 10px;">Okama Sanmikioa</a>
+                                                                <a href="../../manga-tag/okima/" class="tag-cloud-link tag-link-123 tag-link-position-15" style="font-size: 10px;">Okima</a>
+                                                                <a href="../../manga-tag/orkatawai/" class="tag-cloud-link tag-link-153 tag-link-position-16" style="font-size: 10px;">Orkatawai</a>
+                                                                <a href="../../manga-tag/otakini/" class="tag-cloud-link tag-link-137 tag-link-position-17" style="font-size: 10px;">Otakini</a>
+                                                                <a href="../../manga-tag/shahana/" class="tag-cloud-link tag-link-146 tag-link-position-18" style="font-size: 10px;">Shahana</a>
+                                                                <a href="../../manga-tag/taika-sekaiji/" class="tag-cloud-link tag-link-152 tag-link-position-19" style="font-size: 10px;">Taika Sekaiji</a>
+                                                                <a href="../../manga-tag/tasasimi/" class="tag-cloud-link tag-link-124 tag-link-position-20" style="font-size: 10px;">Tasasimi</a> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="site-content"> -->
+
+<%- include('../partials/footer.ejs') -%>

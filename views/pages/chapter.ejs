@@ -1,0 +1,666 @@
+<%- include('../partials/header.ejs') -%>
+<div class="site-content">
+    <div class="c-page-content style-1 reading-content-wrap chapter-type-" data-site-url="http://demo.mangabooth.com/">
+        <div class="content-area">
+            <div class="container">
+                <div class="row">
+                    <% if(infoChapter){%>
+
+                    <div class="main-col col-md-12 col-sm-12 sidebar-hidden">
+                            <h1 id="chapter-heading"><%= infoChapter.chaptername %></h1>
+                        <!-- container & no-sidebar-->
+                        <div class="main-col-inner">
+                            <div class="c-blog-post">
+                                <div class="entry-header header" id="manga-reading-nav-head" data-position="header" data-chapter="chapter-1" data-id="308">
+                                    <div class="wp-manga-nav">
+                                        <div class="entry-header_wrap">
+                                            <div class="c-breadcrumb-wrapper">
+                                                <div class="c-breadcrumb">
+                                                    <ol class="breadcrumb">
+                                                        <li>
+                                                            <a href="/home"> Trang Chủ </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/danh-muc"> Danh Mục </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <%infoChapter.story.forEach(item => {%>
+                                                                <a href="/danh-muc/truyen-tranh?id=<%= item._id %>"> <%= item.storyname %> </a>
+                                                            <%})%>
+                                                        </li>
+
+                                                        <li class="active">
+                                                            <%= infoChapter.chaptername %>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+
+                                                <div class="action-icon">
+                                                    <ul class="action_list_icon list-inline">
+                                                        <li>
+                                                            <script type="text/javascript">
+                                                                var requireLogin2BookMark = true;
+                                                            </script>
+                                                            <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="308" data-chapter="1434" data-page="1" title="Bookmark"><i class="icon ion-ios-bookmark"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="wp-manga-action-button" data-action="toggle-contrast" title="Toggle Dark/Light Mode"><i class="icon ion-md-contrast"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="select-view">
+                                            <!-- select host -->
+                                            <div class="c-selectpicker selectpicker_version">
+                                                <label>
+                                                    <select class="selectpicker host-select">
+                                                        <option class="short" data-limit="40" value="local" data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/?host=local" selected="selected">
+                                                            Server 1
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+
+                                            <!-- select volume -->
+                                            <div class="c-selectpicker selectpicker_volume">
+                                                <label>
+                                                    <select class="selectpicker volume-select">
+                                                        <option class="short" data-limit="40" value="88" selected="selected"> Volume 2 </option>
+                                                        <option class="short" data-limit="40" value="87" selected="selected"> Volume 1 </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+
+                                            <!-- select chapter -->
+                                            <div class="chapter-selection" data-manga="308" data-chapter="chapter-1" data-vol="87" data-type="manga" data-style="paged">
+                                                <!-- place holder -->
+                                            </div>
+
+                                            <!-- select page style -->
+                                            <div class="c-selectpicker selectpicker_load">
+                                                <label>
+                                                    <select class="selectpicker reading-style-select">
+                                                        <option data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/?style=list">List style</option>
+                                                        <option data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/" selected="selected">Paged style</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            var prevChapLastPage = 15;
+                                        </script>
+
+                                        <div class="select-pagination">
+                                            <div class="c-selectpicker selectpicker_page">
+                                                <label>
+                                                    <select id="single-pager" class="selectpicker">
+                                                        <option
+                                                            value="1"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/1/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=1&style=paged&action=chapter_navigate_page"
+                                                            selected="selected"
+                                                        >
+                                                            1/15
+                                                        </option>
+
+                                                        <option
+                                                            value="2"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/2/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=2&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            2/15
+                                                        </option>
+
+                                                        <option
+                                                            value="3"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/3/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=3&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            3/15
+                                                        </option>
+
+                                                        <option
+                                                            value="4"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/4/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=4&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            4/15
+                                                        </option>
+
+                                                        <option
+                                                            value="5"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/5/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=5&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            5/15
+                                                        </option>
+
+                                                        <option
+                                                            value="6"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/6/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=6&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            6/15
+                                                        </option>
+
+                                                        <option
+                                                            value="7"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/7/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=7&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            7/15
+                                                        </option>
+
+                                                        <option
+                                                            value="8"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/8/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=8&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            8/15
+                                                        </option>
+
+                                                        <option
+                                                            value="9"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/9/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=9&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            9/15
+                                                        </option>
+
+                                                        <option
+                                                            value="10"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/10/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=10&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            10/15
+                                                        </option>
+
+                                                        <option
+                                                            value="11"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/11/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=11&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            11/15
+                                                        </option>
+
+                                                        <option
+                                                            value="12"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/12/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=12&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            12/15
+                                                        </option>
+
+                                                        <option
+                                                            value="13"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/13/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=13&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            13/15
+                                                        </option>
+
+                                                        <option
+                                                            value="14"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/14/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=14&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            14/15
+                                                        </option>
+
+                                                        <option
+                                                            value="15"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/15/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=15&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            15/15
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="nav-links">
+                                                <i class="mobile-nav-btn icon ion-md-menu"></i>
+
+                                                <div class="nav-previous">
+                                                    <a
+                                                        href="../../volume-2/chapter-10_1/p/15/"
+                                                        class="btn prev_page"
+                                                        data-navigation="postID=308&amp;chapter=chapter-10_1&amp;manga-paged=15&amp;style=paged&amp;action=chapter_navigate_page"
+                                                        title="Chapter 10"
+                                                    >
+                                                        Prev
+                                                    </a>
+                                                </div>
+
+                                                <div class="nav-next">
+                                                    <a href="p/2/" class="btn next_page" data-navigation="postID=308&amp;chapter=chapter-1&amp;manga-paged=2&amp;style=paged&amp;action=chapter_navigate_page" data-order="1" title="Chapter 1">
+                                                        Next
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <div class="entry-content_wrap">
+                                        <div class="read-container">
+                                            <div class="ad c-ads custom-code body-top-ads"><img src="/assets/wp-content/uploads/2017/10/ads-1.jpg" alt="ads" /></div>
+
+                                            <div class="reading-content">
+                                                <input type="hidden" id="wp-manga-current-chap" data-id="1434" value="chapter-1" />
+                                                <a href="javascript:void(0)" class="page-link-hover page-prev-link"></a>
+
+                                                <img
+                                                    id="image-0"
+                                                    data-image-paged="0"
+                                                    data-src="http://demo.mangabooth.com/wp-content/uploads/WP-manga/data/manga_59dde8d2bf636/chapter-1/sample-01.jpg"
+                                                    class="wp-manga-chapter-img img-responsive lazyload effect-fade"
+                                                />
+
+                                                <a href="javascript:void(0)" id="btn_view_full_image">View Full Size Image</a>
+
+                                                <a href="javascript:void(0)" class="page-link-hover page-next-link"></a>
+                                                <script type="text/javascript" id="chapter_preloaded_images">
+                                                    var chapter_preloaded_images = [
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-01.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-02.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-03.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-04.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-05.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-06.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-07.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-08.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-09.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-10.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-11.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-12.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-13.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-14.jpg",
+                                                            "http:\/\/demo.mangabooth.com\/wp-content\/uploads\/WP-manga\/data\/manga_59dde8d2bf636\/chapter-1\/sample-15.jpg",
+                                                        ],
+                                                        chapter_images_per_page = 1;
+                                                </script>
+                                            </div>
+
+                                            <div class="ad c-ads custom-code body-bottom-ads"><img src="/assets/wp-content/uploads/2017/10/ads-1.jpg" alt="ads" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entry-header footer" id="manga-reading-nav-foot" data-position="footer" data-id="308">
+                                    <div class="wp-manga-nav">
+                                        <div class="select-view">
+                                            <!-- select host -->
+                                            <div class="c-selectpicker selectpicker_version">
+                                                <label>
+                                                    <select class="selectpicker host-select">
+                                                        <option class="short" data-limit="40" value="local" data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/?host=local" selected="selected">
+                                                            Server 1
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+
+                                            <!-- select volume -->
+                                            <div class="c-selectpicker selectpicker_volume">
+                                                <label>
+                                                    <select class="selectpicker volume-select">
+                                                        <option class="short" data-limit="40" value="88" selected="selected"> Volume 2 </option>
+                                                        <option class="short" data-limit="40" value="87" selected="selected"> Volume 1 </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+
+                                            <!-- select chapter -->
+                                            <div class="chapter-selection" data-manga="308" data-chapter="chapter-1" data-vol="87" data-type="manga" data-style="paged">
+                                                <!-- place holder -->
+                                            </div>
+
+                                            <!-- select page style -->
+                                            <div class="c-selectpicker selectpicker_load">
+                                                <label>
+                                                    <select class="selectpicker reading-style-select">
+                                                        <option data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/?style=list">List style</option>
+                                                        <option data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/" selected="selected">Paged style</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            var prevChapLastPage = 15;
+                                        </script>
+
+                                        <div class="select-pagination">
+                                            <div class="c-selectpicker selectpicker_page">
+                                                <label>
+                                                    <select id="single-pager" class="selectpicker">
+                                                        <option
+                                                            value="1"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/1/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=1&style=paged&action=chapter_navigate_page"
+                                                            selected="selected"
+                                                        >
+                                                            1/15
+                                                        </option>
+
+                                                        <option
+                                                            value="2"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/2/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=2&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            2/15
+                                                        </option>
+
+                                                        <option
+                                                            value="3"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/3/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=3&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            3/15
+                                                        </option>
+
+                                                        <option
+                                                            value="4"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/4/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=4&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            4/15
+                                                        </option>
+
+                                                        <option
+                                                            value="5"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/5/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=5&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            5/15
+                                                        </option>
+
+                                                        <option
+                                                            value="6"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/6/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=6&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            6/15
+                                                        </option>
+
+                                                        <option
+                                                            value="7"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/7/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=7&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            7/15
+                                                        </option>
+
+                                                        <option
+                                                            value="8"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/8/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=8&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            8/15
+                                                        </option>
+
+                                                        <option
+                                                            value="9"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/9/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=9&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            9/15
+                                                        </option>
+
+                                                        <option
+                                                            value="10"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/10/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=10&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            10/15
+                                                        </option>
+
+                                                        <option
+                                                            value="11"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/11/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=11&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            11/15
+                                                        </option>
+
+                                                        <option
+                                                            value="12"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/12/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=12&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            12/15
+                                                        </option>
+
+                                                        <option
+                                                            value="13"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/13/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=13&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            13/15
+                                                        </option>
+
+                                                        <option
+                                                            value="14"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/14/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=14&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            14/15
+                                                        </option>
+
+                                                        <option
+                                                            value="15"
+                                                            data-redirect="http://demo.mangabooth.com/manga/bita-sasumi-land/volume-1/chapter-1/p/15/"
+                                                            data-navigation="postID=308&chapter=chapter-1&manga-paged=15&style=paged&action=chapter_navigate_page"
+                                                        >
+                                                            15/15
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="nav-links">
+                                                <i class="mobile-nav-btn icon ion-md-menu"></i>
+
+                                                <div class="nav-previous">
+                                                    <a
+                                                        href="../../volume-2/chapter-10_1/p/15/"
+                                                        class="btn prev_page"
+                                                        data-navigation="postID=308&amp;chapter=chapter-10_1&amp;manga-paged=15&amp;style=paged&amp;action=chapter_navigate_page"
+                                                        title="Chapter 10"
+                                                    >
+                                                        Prev
+                                                    </a>
+                                                </div>
+
+                                                <div class="nav-next">
+                                                    <a href="p/2/" class="btn next_page" data-navigation="postID=308&amp;chapter=chapter-1&amp;manga-paged=2&amp;style=paged&amp;action=chapter_navigate_page" data-order="1" title="Chapter 1">
+                                                        Next
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="main-col col-12 col-sm-8 col-md-8 col-lg-8">
+                                    <!-- comments-area -->
+
+                                    <div id="manga-discussion" class="c-blog__heading style-2 font-heading">
+                                        <i class="ion-ios-star"></i>
+                                        <h4>MANGA DISCUSSION</h4>
+                                    </div>
+                                    <div class="manga-discussion wrapper">
+                                        <div class="hr mv40"></div>
+
+                                        <div id="comments" class="comments-area">
+                                            <div id="respond" class="comment-respond">
+                                                <h4 id="reply-title" class="comment-reply-title">
+                                                    Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">Cancel reply</a></small>
+                                                </h4>
+                                                <form action="http://demo.mangabooth.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                                                    <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
+                                                    <p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comment"></textarea></p>
+                                                    <p class="comment-form-author">
+                                                        <label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" placeholder="Name" value size="30" aria-required="true" />
+                                                    </p>
+                                                    <p class="comment-form-email">
+                                                        <label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" placeholder="Email" value size="30" aria-required="true" />
+                                                    </p>
+                                                    <p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" placeholder="Website" value size="30" /></p>
+                                                    <p class="comment-form-cookies-consent">
+                                                        <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+                                                        <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+                                                    </p>
+                                                    <p class="form-submit">
+                                                        <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type="hidden" name="comment_post_ID" value="308" id="comment_post_ID" />
+                                                        <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+                                                    </p>
+                                                    <input type="hidden" name="wp_manga_chapter_id" value="1434" />
+                                                </form>
+                                            </div>
+                                            <!-- #respond -->
+                                        </div>
+                                        <!-- #comments -->
+                                    </div>
+
+                                    <!-- END comments-area -->
+                                </div>
+
+                                <div class="sidebar-col col-md-4 col-sm-4">
+                                    <div id="main-sidebar" class="main-sidebar" role="complementary">
+                                        <div class="widget_text row">
+                                            <div id="custom_html-19" class="widget_text widget col-12 col-md-12 default no-icon widget_custom_html">
+                                                <div class="widget_text widget__inner widget_custom_html__inner c-widget-wrap">
+                                                    <div class="widget_text widget-content">
+                                                        <div class="textwidget custom-html-widget">
+                                                            <b>Tips</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aulores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                                            sit ame
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div id="c-w-posts-7" class="widget col-xs-12 col-md-12 default no-icon heading-style-1 c-w-posts c-popular manga-widget widget-manga-recent">
+                                                <div class="widget__inner c-w-posts c-popular manga-widget widget-manga-recent__inner c-widget-wrap">
+                                                    <div class="c-widget-content style-2">
+                                                        <div class="widget-heading font-nav"><h5 class="heading">Madara - Posts</h5></div>
+                                                        <div class="widget-content">
+                                                            <div class="popular-item-wrap">
+                                                                <div class="popular-img widget-thumbnail c-image-hover">
+                                                                    <a title="What You Know About Manga And What You Don&#8217;t Know About Manga." href="../../../../what-you-know-about-manga-and-what-you-dont-know-about-manga/">
+                                                                        <img
+                                                                            width="300"
+                                                                            height="165"
+                                                                            data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-543370-300x165.jpg"
+                                                                            data-srcset="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-543370-300x165.jpg 300w, http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-543370-254x140.jpg 254w"
+                                                                            data-sizes="(max-width: 300px) 100vw, 300px"
+                                                                            class="img-responsive lazyload effect-fade"
+                                                                            src="../../../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                            style="padding-top: 55%;"
+                                                                            alt="wallhaven-543370"
+                                                                        />
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="popular-content">
+                                                                    <h5 class="widget-title">
+                                                                        <a title="What You Know About Manga And What You Don&#8217;t Know About Manga." href="../../../../what-you-know-about-manga-and-what-you-dont-know-about-manga/">
+                                                                            What You Know About Manga And What You Don&#8217;t Know About Manga.
+                                                                        </a>
+                                                                    </h5>
+
+                                                                    <div class="posts-date">October 6, 2017</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="popular-item-wrap">
+                                                                <div class="popular-img widget-thumbnail c-image-hover">
+                                                                    <a title="10 Facts You Never Knew About Manga." href="../../../../10-facts-you-never-knew-about-manga/">
+                                                                        <img
+                                                                            width="300"
+                                                                            height="165"
+                                                                            data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-551702-300x165.jpg"
+                                                                            data-srcset="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-551702-300x165.jpg 300w, http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-551702-254x140.jpg 254w"
+                                                                            data-sizes="(max-width: 300px) 100vw, 300px"
+                                                                            class="img-responsive lazyload effect-fade"
+                                                                            src="../../../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                            style="padding-top: 55%;"
+                                                                            alt="wallhaven-551702"
+                                                                        />
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="popular-content">
+                                                                    <h5 class="widget-title">
+                                                                        <a title="10 Facts You Never Knew About Manga." href="../../../../10-facts-you-never-knew-about-manga/">10 Facts You Never Knew About Manga.</a>
+                                                                    </h5>
+
+                                                                    <div class="posts-date">October 6, 2017</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="popular-item-wrap">
+                                                                <div class="popular-img widget-thumbnail c-image-hover">
+                                                                    <a title="Seven Mind Numbing Facts About Cosplay." href="../../../../seven-mind-numbing-facts-about-cosplay/">
+                                                                        <img
+                                                                            width="300"
+                                                                            height="165"
+                                                                            data-src="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-560695-300x165.jpg"
+                                                                            data-srcset="http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-560695-300x165.jpg 300w, http://demo.mangabooth.com/wp-content/uploads/2017/10/wallhaven-560695-254x140.jpg 254w"
+                                                                            data-sizes="(max-width: 300px) 100vw, 300px"
+                                                                            class="img-responsive lazyload effect-fade"
+                                                                            src="../../../../wp-content/themes/madara/images/dflazy.jpg"
+                                                                            style="padding-top: 55%;"
+                                                                            alt="wallhaven-560695"
+                                                                        />
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="popular-content">
+                                                                    <h5 class="widget-title">
+                                                                        <a title="Seven Mind Numbing Facts About Cosplay." href="../../../../seven-mind-numbing-facts-about-cosplay/">Seven Mind Numbing Facts About Cosplay.</a>
+                                                                    </h5>
+
+                                                                    <div class="posts-date">October 6, 2017</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="widget_text row">
+                                            <div id="custom_html-29" class="widget_text widget col-xs-12 col-md-12 default no-icon heading-style-1 widget_custom_html">
+                                                <div class="widget_text widget__inner widget_custom_html__inner c-widget-wrap">
+                                                    <div class="widget_text widget-content">
+                                                        <div class="textwidget custom-html-widget"><img src="../../../../wp-content/uploads/2017/10/ads-square.jpg" alt="ads" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wp-manga-tags-wrapper">
+                                <div class="wp-manga-tags">
+                                    <h5>Tags:</h5>
+                                    <div class="wp-manga-tags-list">
+                                        <a href="../../../../manga-tag/cartoon/" class>Cartoon</a>, <a href="../../../../manga-tag/land/" class>Land</a>, <a href="../../../../manga-tag/natamashimi/" class>Natamashimi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="site-content"> -->
+<%- include('../partials/footer.ejs') -%>
